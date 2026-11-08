@@ -1,68 +1,77 @@
 # Análisis estadístico de la generación eléctrica mensual en Chile
 
+Proyecto Final Integrador de Programación Avanzada – Grupo 13
+(Laura Meza, Cesar Antiqueo, Lucas Segura). Docente: Alex Flores Fuentealba.
+
 ## Descripción del proyecto
 
-Este proyecto busca analizar la generación bruta mensual de energía eléctrica en Chile, considerando los datos disponibles desde enero de 2018 hasta septiembre de 2026.
+Análisis de la generación bruta mensual de energía eléctrica en Chile entre enero de 2018 y
+septiembre de 2026 (105 registros, en GWh), usando Python, Pandas, NumPy y Matplotlib.
 
-Para preparar la información se utiliza Python y la biblioteca Pandas. Durante este avance se trabajó en la carga, diagnóstico, limpieza, transformación y validación del conjunto de datos.
+Pregunta del proyecto: ¿cómo cambia la generación eléctrica entre los meses y qué variaciones
+se observan durante el período estudiado?
 
-## Objetivo
+## Avances
 
-Preparar un conjunto de datos limpio y organizado que permita realizar posteriormente un análisis estadístico de la generación eléctrica mensual en Chile.
+| Avance | Contenido | Informe |
+|--------|-----------|---------|
+| 1 | Planteamiento del problema, carga de datos | `reportes/avance_1.pdf` |
+| 2 | Diagnóstico, limpieza, transformación y validación | `reportes/avance_2.pdf` |
+| 3 | Estadísticas descriptivas, indicadores y gráficos | `reportes/avance_3.pdf` |
 
 ## Estructura del proyecto
 
-- `Datos/`: contiene los archivos originales y procesados.
-  - `Originales/`: contiene el archivo CSV original.
-  - `procesados/`: contiene el conjunto de datos limpio.
-- `src/`: contiene los módulos de Python.
-  - `carga.py`: carga el archivo CSV.
-  - `Diagnostico.py`: realiza el diagnóstico de calidad de los datos.
-  - `limpieza.py`: limpia y organiza los registros.
-  - `transformaciones.py`: agrega las columnas de año y mes.
-  - `validaciones.py`: comprueba la calidad de los datos transformados.
-  - `main.py`: organiza y ejecuta el proceso completo.
-- `reportes/`: contiene los informes y evidencias del proyecto.
-- `main.py`: permite ejecutar el proceso desde la carpeta principal.
-- `requirements.txt`: contiene las dependencias del proyecto.
-- `README.md`: contiene la documentación del proyecto.
+```
+proyecto_generacion_electrica/
+├── Datos/
+│   ├── Originales/Dataset_original.csv     # datos originales (sin modificar)
+│   └── procesados/dataset_limpio.csv       # dataset limpio (Avance 2)
+├── resultados/
+│   ├── estadisticas.csv                    # estadísticas descriptivas y frecuencias
+│   ├── indicadores.csv                     # indicadores automatizados
+│   └── graficos/                           # grafico_01.png, grafico_02.png, grafico_03.png
+├── reportes/                               # avance_1.pdf, avance_2.pdf, avance_3.pdf
+├── src/
+│   ├── carga.py            # carga el CSV
+│   ├── Diagnostico.py      # diagnóstico de calidad
+│   ├── limpieza.py         # limpieza
+│   ├── transformaciones.py # agrega año y mes
+│   ├── validaciones.py     # valida el dataset transformado
+│   ├── estadisticas.py     # Avance 3: estadística descriptiva
+│   ├── indicadores.py      # Avance 3: indicadores automatizados
+│   └── visualizaciones.py  # Avance 3: gráficos con Pyplot
+├── main.py                 # ejecuta todo el proceso
+├── requirements.txt
+└── README.md
+```
 
-## Requisitos
+## Instalación y ejecución
 
-- Python 3.
-- Pandas 3.1.0.
-
-## Instalación
-
-Desde la carpeta principal del proyecto, instalar las dependencias con:
+Desde la carpeta principal del proyecto:
 
 ```bash
 python -m pip install -r requirements.txt
-```
-
-## Ejecución
-
-Desde la carpeta principal del proyecto, ejecutar:
-
-```bash
 python main.py
 ```
 
-## Resultado
+Al ejecutar `main.py` se limpia el dataset, se calculan las estadísticas y los indicadores y se
+generan los gráficos automáticamente.
 
-El proceso genera el archivo `dataset_limpio.csv`, ubicado en:
+## Resultados del Avance 3
 
-`Datos/procesados/dataset_limpio.csv`
+- `resultados/estadisticas.csv`: cantidad de registros, media, mediana, mínimo, máximo, rango,
+  desviación estándar, cuartiles, rango intercuartílico y frecuencias de año y mes.
+- `resultados/indicadores.csv`: ocho indicadores con método de cálculo, resultado, unidad e
+  interpretación (registros válidos, promedio mensual, máximo y mínimo con su fecha, variación
+  anual comparable, % de meses sobre el promedio, meses críticos y coeficiente de variación).
+- `resultados/graficos/grafico_01.png`: evolución mensual (líneas, con promedio móvil de 12 meses).
+- `resultados/graficos/grafico_02.png`: distribución de la generación mensual (histograma).
+- `resultados/graficos/grafico_03.png`: generación acumulada enero-septiembre por año (barras).
 
-El archivo contiene las siguientes columnas:
-
-- `fecha`
-- `generacion_bruta_gwh`
-- `anio`
-- `mes`
+**Nota:** 2026 solo tiene datos hasta septiembre, por lo que la variación anual y el gráfico de
+barras comparan siempre los mismos meses (enero-septiembre) de cada año.
 
 ## Fuente de datos
 
 Comisión Nacional de Energía (CNE), plataforma Energía Abierta:
-
 https://energiaabierta.cl/categorias-estadistica/electricidad/

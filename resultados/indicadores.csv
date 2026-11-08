@@ -1,0 +1,9 @@
+﻿indicador,metodo_calculo,resultado,unidad,interpretacion
+Total de registros válidos,"Conteo de filas del dataset limpio sin nulos, duplicados ni negativos.",105.0,meses,Se analizan 105 meses (2018-01 a 2026-09); la serie es completa y confiable.
+Generación promedio mensual,Media aritmética de generacion_bruta_gwh.,6800.681665960825,GWh/mes,"Un mes típico genera cerca de 6.800,7 GWh."
+Mes de mayor generación,Valor máximo de la serie y su fecha asociada.,7536.7359099999985,GWh,"El máximo ocurrió en 2026-06; supera a la media en 10,8 %."
+Mes de menor generación,Valor mínimo de la serie y su fecha asociada.,5972.30592374,GWh,"El mínimo ocurrió en 2018-09; queda 12,2 % bajo la media."
+Variación anual comparable (ene-sep de 2026 vs 2025),(Suma ene-último mes del último año / suma de los mismos meses del año anterior - 1) x 100.,2.3547534943661796,%,"Con los mismos meses, la generación aumentó 2,35 % respecto del año anterior."
+Porcentaje de meses sobre el promedio,(Meses con generación > media / total de meses) x 100.,46.666666666666664,%,"46,7 % de los meses supera la media; el resto queda por debajo, lo que indica una distribución bastante equilibrada en torno a ella."
+Cantidad de meses críticos (atípicos),Conteo de meses con |generación - media| > 1 desviación estándar.,36.0,meses,"36 meses se alejan más de 401,7 GWh de la media; son los meses atípicos de la serie."
+Coeficiente de variación mensual,(Desviación estándar / media) x 100.,5.90647494552823,%,La variabilidad relativa es baja: la generación mensual es bastante estable.

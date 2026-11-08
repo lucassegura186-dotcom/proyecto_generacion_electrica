@@ -1,0 +1,33 @@
+﻿tipo,variable,medida,valor,unidad
+numerica,generacion_bruta_gwh,Cantidad de registros,105.0,meses
+numerica,generacion_bruta_gwh,Media,6800.681665960825,GWh
+numerica,generacion_bruta_gwh,Mediana,6788.789095198059,GWh
+numerica,generacion_bruta_gwh,Mínimo,5972.30592374,GWh
+numerica,generacion_bruta_gwh,Máximo,7536.7359099999985,GWh
+numerica,generacion_bruta_gwh,Rango,1564.4299862599983,GWh
+numerica,generacion_bruta_gwh,Desviación estándar,401.6805587251079,GWh
+numerica,generacion_bruta_gwh,Primer cuartil (Q1),6516.05774717952,GWh
+numerica,generacion_bruta_gwh,Segundo cuartil (Q2),6788.789095198059,GWh
+numerica,generacion_bruta_gwh,Tercer cuartil (Q3),7135.978442684895,GWh
+numerica,generacion_bruta_gwh,Rango intercuartílico (Q3-Q1),619.9206955053742,GWh
+categorica,anio,Frecuencia 2018,12.0,meses
+categorica,anio,Frecuencia 2019,12.0,meses
+categorica,anio,Frecuencia 2020,12.0,meses
+categorica,anio,Frecuencia 2021,12.0,meses
+categorica,anio,Frecuencia 2022,12.0,meses
+categorica,anio,Frecuencia 2023,12.0,meses
+categorica,anio,Frecuencia 2024,12.0,meses
+categorica,anio,Frecuencia 2025,12.0,meses
+categorica,anio,Frecuencia 2026,9.0,meses
+categorica,mes,Frecuencia Enero,9.0,años
+categorica,mes,Frecuencia Febrero,9.0,años
+categorica,mes,Frecuencia Marzo,9.0,años
+categorica,mes,Frecuencia Abril,9.0,años
+categorica,mes,Frecuencia Mayo,9.0,años
+categorica,mes,Frecuencia Junio,9.0,años
+categorica,mes,Frecuencia Julio,9.0,años
+categorica,mes,Frecuencia Agosto,9.0,años
+categorica,mes,Frecuencia Septiembre,9.0,años
+categorica,mes,Frecuencia Octubre,8.0,años
+categorica,mes,Frecuencia Noviembre,8.0,años
+categorica,mes,Frecuencia Diciembre,8.0,años
