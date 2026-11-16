@@ -75,3 +75,16 @@ barras comparan siempre los mismos meses (enero-septiembre) de cada año.
 
 Comisión Nacional de Energía (CNE), plataforma Energía Abierta:
 https://energiaabierta.cl/categorias-estadistica/electricidad/
+
+## Avance 4: dashboard interactivo
+
+Instalar Python 3.10 o superior. Desde la carpeta raíz del repositorio:
+
+```bash
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+El dashboard usa `Datos/procesados/dataset_limpio.csv` y no modifica los avances anteriores. Incluye filtros por año inicial, año final y meses visibles; promedio, máximo, mínimo y total; gráfico histórico y proyecciones de 1 a 36 meses mediante tendencia lineal y promedio de los últimos N meses. El pronóstico usa una serie mensual consecutiva hasta el año final seleccionado, sin aplicar el filtro de meses visibles. Comparación mediante MAE en los últimos 12 meses (evaluación temporal simple).
+
+**Precauciones:** los pronósticos no modelan estacionalidad ni factores externos y no son oficiales. El promedio móvil se utiliza como pronóstico de nivel constante; no es una predicción recursiva. La regresión lineal se limita a valores no negativos. Para una evaluación más robusta conviene realizar validación temporal con múltiples ventanas.
