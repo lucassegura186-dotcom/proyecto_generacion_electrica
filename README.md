@@ -10,7 +10,9 @@ septiembre de 2026 (105 registros, en GWh), usando Python, Pandas, NumPy y Matpl
 
 Pregunta del proyecto: ¿cómo cambia la generación eléctrica entre los meses y qué variaciones
 se observan durante el período estudiado?
+## Dashboard interactivo
 
+[Ver dashboard de generación eléctrica de Chile](https://lucassegura186-dotcom-proyecto-generacion-electrica-app-kfx99g.streamlit.app)
 ## Avances
 
 | Avance | Contenido | Informe |
